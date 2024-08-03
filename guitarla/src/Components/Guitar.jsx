@@ -1,10 +1,7 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-export const Guitar = ({guitar, carritoCompras}) => {
-
-  const {name, image, description, price} = guitar
-
-  
+export const Guitar = ({ guitar, carritoCompras }) => {
+  const { name, image, description, price } = guitar;
 
   return (
     <>
@@ -18,11 +15,13 @@ export const Guitar = ({guitar, carritoCompras}) => {
         </div>
         <div className="col-8">
           <h3 className="text-black fs-4 fw-bold text-uppercase">{name}</h3>
-          <p>
-            {description}
-          </p>
+          <p>{description}</p>
           <p className="fw-black text-primary fs-3">{price}</p>
-          <button onClick={() => carritoCompras(guitar)} type="button" className="btn btn-dark w-100">
+          <button
+            onClick={() => carritoCompras(guitar)}
+            type="button"
+            className="btn btn-dark w-100"
+          >
             Agregar al Carrito
           </button>
         </div>
@@ -41,5 +40,5 @@ Guitar.propTypes = {
     description: PropTypes.string,
     price: PropTypes.number,
   }).isRequired,
-  carritoCompras: PropTypes.func.isRequired 
-}
+  carritoCompras: PropTypes.func.isRequired,
+};
