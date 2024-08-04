@@ -1,6 +1,6 @@
+import type { GuitarProps } from '../types/index';
 
-
-export const Guitar = ({ guitar, carritoCompras } : {guitar : Guitar}) => {
+export const Guitar = ({ guitar, carritoCompras } : GuitarProps) => {
   const { name, image, description, price } = guitar;
 
   return (

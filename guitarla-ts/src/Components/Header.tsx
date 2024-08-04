@@ -1,4 +1,14 @@
-/* eslint-disable */
+import type { CartItem, Guitar } from "../types";
+
+type HeaderProps = {
+  cart: CartItem[]
+  removeFromCart: (id:Guitar['id']) => void
+  incrementQuantity: (id:Guitar['id']) => void
+  decrementQuantity: (id:Guitar['id']) => void
+  clearCart: () => void
+  isEmpty: boolean
+  cartTotal: number
+}
 
 export const Header = ({
   cart,
@@ -8,7 +18,7 @@ export const Header = ({
   clearCart,
   isEmpty,
   cartTotal,
-}) => {
+} : HeaderProps) => {
   return (
     <>
       <header className="py-5 header">
@@ -32,7 +42,7 @@ export const Header = ({
                 />
 
                 <div id="carrito" className="bg-white p-3">
-                  {isEmpty === 0 ? (
+                  {isEmpty === true ? (
                     <p className="text-center">El carrito esta vacio</p>
                   ) : (
                     <>

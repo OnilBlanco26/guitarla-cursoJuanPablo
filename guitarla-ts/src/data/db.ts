@@ -1,10 +1,5 @@
-interface Guitar {
-    id: number
-    name: string
-    image: string
-    description: string
-    price: number
-}
+import type { Guitar } from '../types/index'
+
 
 export const db : Guitar[] = [
     {
